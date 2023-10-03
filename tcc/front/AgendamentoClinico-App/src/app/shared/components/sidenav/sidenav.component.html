@@ -1,0 +1,39 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+
+  <div class="logo-container">
+    <mat-divider mat-inset></mat-divider>
+      <button class="logo" (click)="toggleCollapse()">
+        <i class="fa-solid fa-sliders"></i>
+      </button>
+      <div class="logo-text" @fadeInOut *ngIf="collapsed">
+        <a routerLink="/painel">
+          <img class="logo-image" src="../../../../assets/logo/_NEWCARD.PNG" alt="">
+        </a>
+      </div>
+
+      <!-- <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
+          <i class="fa-solid fa-xmark btn-close fa-times "></i>
+      </button> -->
+
+  </div>
+  <ul class="sidenav-nav">
+
+    <li class="sidenav-nav-item" *ngFor="let item of items_menu">
+
+        <a class="sidenav-nav-link" [routerLink]="[item.routeLink]"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+        >
+            <mat-icon class="sidenav-link-icon" fontSet="fa" [ngClass]="item.icon"></mat-icon>
+            <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+                {{item.label}}
+            </span>
+        </a>
+        <mat-divider mat-inset></mat-divider>
+    </li>
+  </ul>
+
+</div>
+
+
+

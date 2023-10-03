@@ -1,0 +1,29 @@
+.toolbar-menu {
+  width: 100%;
+  background: #e0e0e0;
+  font-size: 1rem;
+  top: 0;
+  z-index: 1001;
+  box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+  padding: 15px;
+
+
+}
+
+.logo-image{
+  width: 140px;
+  margin-left: -5px;
+  margin-top: 25px;
+}
+
+.content-center {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+.space-right-icon {
+  background: hidden;
+  font-size: 2rem;
+  color: #0e6a8e;
+}
