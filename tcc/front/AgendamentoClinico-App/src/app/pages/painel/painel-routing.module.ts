@@ -4,6 +4,7 @@ import { PainelComponent } from './painel.component';
 
 const routes: Routes = [{ path: '', component: PainelComponent }];
 
+
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]

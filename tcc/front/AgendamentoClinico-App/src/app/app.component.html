@@ -1,11 +1,14 @@
-<app-sidenav></app-sidenav>
+<app-sidenav *ngIf="logado"></app-sidenav> 
 
-<app-toolbar></app-toolbar>
+
+<app-toolbar *ngIf="logado"></app-toolbar>
 
 
 <div class="content">
+    <button type="button" (click)="logado = !logado">Logins</button>
   <router-outlet></router-outlet>
 </div>
+
 
 
 
