@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./tela-login.component.scss']
 })
 export class TelaLoginComponent {
-
+  title: string = "Título da Página";
 }
